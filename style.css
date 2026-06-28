@@ -1,0 +1,14 @@
+.logo{
+    height: 10px;
+    width: 10px;
+}
+.nav-link{
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+}
+.nav-link:hover{
+    color: #fff;
+    background-color: #000;
+    border-radius: 15px;
+}
