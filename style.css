@@ -12,3 +12,311 @@
     background-color: #000;
     border-radius: 15px;
 }
+.hero{
+   display:flex;
+   justify-content:space-between;
+   align-items:center;
+   padding:70px 80px;
+   background:#F8F3ED;
+   gap:60px;
+}
+
+.hero-content{
+    width:45%;
+}
+
+.hero-image{
+    width:55%;
+    height:550px;
+    overflow:hidden;
+}
+
+.hero-image img{
+    width:100%;
+    height:600px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.hero-image:hover img{
+    transform:scale(1.06);
+}
+
+.hero h1{
+    font-size:72px;
+    line-height:1.1;
+    color:#2E1D14;
+    margin:20px 0;
+    font-family:Georgia, serif;
+}
+
+.hero h1 span{
+    color:#D7A86E;
+    font-style:italic;
+}
+
+.hero p{
+    font-size:18px;
+    color:#5c5148;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+   display:flex;
+   gap:20px;
+}
+
+.btn-dark{
+    background:#2d1810;
+    color:white;
+    text-decoration:none;
+    padding:15px 35px;
+    letter-spacing:2px;
+    transition:.3s;
+    box-shadow:0 4px 6px #D7A86E;
+}
+
+.btn-dark:hover{
+   background:#D7A86E !important;
+   color:#8E3200 !important;
+}
+
+.card{
+    width:350px;
+    background:#F8F3ED;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 6px 8px #D7A86E;
+}
+.main-card{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:30px 0;
+    flex-wrap:wrap;
+}
+
+.card img{
+    width:100%;
+    transition:0.3s;
+    display: block;
+    object-fit: cover;
+}
+.card:hover img{
+   transform: scale(0.8);
+}
+
+.card button{
+    background:#2d1810;
+    color:white;
+    text-decoration:none;
+    padding:15px 35px;
+    letter-spacing:2px;
+}
+.card button:hover{
+      background:#D7A86E;
+   color:#8E3200;
+}
+
+
+@media(max-width:992px){
+.hero{
+flex-direction:column;
+padding:40px 25px;
+}
+.hero-content{
+width:100%;
+}
+.hero-image{
+width:100%;
+}
+.hero h1{
+font-size:45px;
+}
+.hero-image img{
+height:400px;
+}
+.hero-buttons{
+flex-direction:column;
+}
+}
+
+.collection{
+padding:30px 20px;
+background:#ffffff;
+}
+
+.collection-header{
+text-align:center;
+margin-bottom:20px;
+}
+
+.collection-subtitle{
+font-size:15px;
+letter-spacing:3px;
+color:#9b7a5a;
+text-transform:uppercase;
+}
+
+.collection-header h2{
+font-size:40px;
+font-weight:500;
+color:#2e1d14;
+margin-top:10px;
+}
+
+.collection-main{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+}
+
+.collection-card{
+position:relative;
+overflow:hidden;
+border-radius:6px;
+}
+
+.collection-card img{
+width:100%;
+height:520px;
+object-fit:cover;
+display:block;
+transition:.6s;
+}
+
+.collection-card::before{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.45);
+transition:.4s;
+}
+
+.collection-card:hover img{
+transform:scale(1.08);
+}
+
+.collection-card:hover::before{
+background:rgba(0,0,0,.55);
+}
+
+.collection-card-content{
+position:absolute;
+left:40px;
+bottom:40px;
+color:white;
+width:80%;
+z-index:2;
+}
+
+.collection-card-content h3{
+font-size:32px;
+font-weight:700;
+margin-bottom:15px;
+}
+
+.collection-card-content p{
+font-size:17px;
+line-height:1.8;
+margin-bottom:25px;
+font-weight:500;
+}
+
+.discover-btn{
+display:inline-block;
+color:#fff;
+text-decoration:none;
+font-weight:600;
+letter-spacing:1px;
+border-bottom:2px solid #D7A86E;
+padding-bottom:4px;
+transition:.3s;
+}
+
+.discover-btn:hover{
+color:#D7A86E;
+transform:translateX(6px);
+}
+
+
+.footer{
+    background:#442619;
+    color:#f8f3ed;
+    padding:70px 80px 20px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    gap:80px;
+    flex-wrap:wrap;
+}
+
+.footer-about{
+    width:40%;
+}
+
+.footer-about h2{
+    font-size:34px;
+    letter-spacing:4px;
+    margin-bottom:20px;
+}
+
+.footer-about p{
+    color:#d8c5b5;
+    line-height:1.8;
+}
+
+.footer-links,
+
+.footer-address{
+    display:flex;
+    flex-direction:column;
+}
+
+.footer h4{
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:13px;
+    color:#b88c63;
+    margin-bottom:20px;
+}
+
+.footer a{
+    color:white;
+    text-decoration:none;
+    margin-bottom:12px;
+    transition:.3s;
+}
+
+.footer a:hover{
+    color:#D7A86E;
+}
+
+.footer-address p{
+    margin-bottom:10px;
+    color:#d8c5b5;
+}
+
+.email{
+    color:#D7A86E !important;
+}
+
+.footer-bottom{
+    margin-top:50px;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.15);
+    display:flex;
+    justify-content:space-between;
+    color:#c8b3a2;
+    font-size:14px;
+}
+                        HOME PAGE ends here
+
+                        BRAND PAGE starts here
+.brand-header{
+    text-align:center;
+    margin-bottom:30px;
+}
