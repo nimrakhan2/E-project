@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRANDS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <H1>BRANDS </H1>
+        <div class="SEARCH-CONTAINER">
+            <input type="text" id="brandsearch" placeholder="SEARCH BRANDS" onkeyup="filterBrands()">
+        </div>
+    </header>
+
+
+    <section class="brands-grid" id="BRANDSGRID">
+        <div class="brand-card" data-name="GUCCI" onclick="selectBrand('GUCCI')">
+            <h3>GUCCI</h3>
+            <p>EXPLORE COLLECTION </p>
+        </div>
+        <BR>
+        <div class="brand-card" data-name="LOUIS VUITTON" onclick="selectBrand('LOUIS VUITTON')">
+            <h3>LOUIS VUITTON</h3>
+            <p>EXPLORE COLLECTION </p>
+        </div>
+        <BR>
+        <div class="brand-card" data-name="PRADA" onclick="selectBrand('PRADA')">
+            <h3>PRADA</h3>
+            <p>EXPLORE COLLECTION </p>
+        </div>
+        <BR></BR>
+        <div class="brand-card" data-name="CHANEL" onclick="selectBrand('CHANEL')">
+            <h3>CHANEL</h3>
+            <p>EXPLORE COLLECTION </p>
+        </div>
+        <BR></BR>
+        <div class="brand-card" data-name="HERMES" onclick="selectBrand('HERMES')">
+            <h3>HERMES</h3>
+            <p>EXPLORE COLLECTION </p>
+        </div>
+        <BR>
+        <div class="brand-card" data-name="FENDI" onclick="selectBrand('FENDI')">
+            <h3>FENDI</h3>
+            <p>EXPLORE COLLECTION </p>
+        </div>
+        <BR></BR>
+        <div class="brand-card" data-name="DIOR" onclick="selectBrand('DIOR')">
+            <h3>DIOR</h3>
+            <p>EXPLORE COLLECTION </p>
+        </div>
+    </section>
+
+
+
+    <section id="products-section" class="hidden">
+        <button class="back-btn" onclick="goBackToBrands()">Back To Brands</button>
+        <h2 id="selected-brand-title">BRAND NAME</h2>
+
+        <div class="categories-menu">
+            <button class="category-btn active" onclick="filterCategory('all')">ALL</button>
+            <button class="category-btn" onclick="filterCategory('HANDBAGS')">HANDBAGS</button>
+            <button class="category-btn" onclick="filterCategory('WALLETS')">WALLETS</button>
+            <button class="category-btn" onclick="filterCategory('PURSES')">PURSES</button>
+        </div>
+
+        <div id="products-grid-container" class="products-grid"></div>
+    </section>
+
+
+    <section id="product-detail-section" class="hidden">
+        <button class="back-btn" onclick="goBackToBrands()">Back To Brands</button>
+
+
+        <div class="card-container">
+           
+        </div>
+
+    </section>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
