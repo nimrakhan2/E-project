@@ -1,7 +1,4 @@
 
-
-
-
 let currentBrandName = ""; 
 let currentCategoryName = ""; 
 
