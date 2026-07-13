@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location | Nextag</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #c2a48c; /* Warm corporate linen beige canvas */
+            color: #c4866f; /* Deep espresso tone for crisp, professional readability */
+            line-height: 1;
+            padding: 60px 20px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1140px; 
+            width: 100%;
+            margin: 0 auto;
+            background: #ebe4d5; /* Richer, deep beige tone for structural grounding */
+            padding: 50px;
+            border-radius: 12px;
+            border: 1px solid #dfd6c4; /* Fine tone-on-tone profile border */
+            box-shadow: 0 12px 40px rgba(168, 95, 68, 0.05); /* Soft structural depth shadow */
+        }
+
+        /* Typography Hierarchy */
+        h1 {
+            font-family: 'Georgia', Cambria, 'Times New Roman', Times, serif; 
+            color: #83422e; /* Strong espresso contrast anchor */
+            font-size: 2.5rem;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            margin-bottom: 35px;
+            border-bottom: 1px solid #dfd6c4;
+            padding-bottom: 20px;
+        }
+
+        h2 {
+            color: #705347; /* Warm mocha accenting */
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em; 
+        }
+
+        p, address {
+            font-style: normal;
+            color: #ac7e6a; 
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive Grid Configuration */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
+
+        @media (min-width: 992px) {
+            .content-grid {
+                grid-template-columns: 7fr 5fr; 
+            }
+        }
+
+        /* Map Canvas */
+        .map-container {
+            background: #ede6da;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #dfd6c4;
+            min-height: 420px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .map-box {
+            flex-grow: 1;
+            background: #dfd6c4; /* Slightly deeper matte-beige sandbox placeholder */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8b6e5f;
+            font-size: 0.95rem;
+            letter-spacing: 0.02em;
+            min-height: 350px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Executive Interaction Anchor */
+        .btn-direction {
+            display: inline-block;
+            text-align: center;
+            background-color: #a77762; /* Deep chocolate signature block */
+            color: #ffffff;
+            text-decoration: none;
+            padding: 16px 28px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            border-top: 1px solid rgba(151, 91, 91, 0.05);
+            transition: background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .btn-direction:hover {
+            background-color: #946657; 
+        }
+
+        /* Information Sidebar Layout */
+        .info-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .info-section {
+            background: #f4efe6; /* Reflects back to the light canvas tone for sharp inner contrast */
+            padding: 28px;
+            border-radius: 8px;
+            border: 1px solid #dfd6c4;
+            border-left: 3px solid #947467; /* Solid structural accent bar */
+        }
+
+        .info-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Interactive Communications Link */
+        .phone-link {
+            color: #705347;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            display: inline-block;
+            margin-top: 5px;
+            transition: color 0.2s ease;
+        }
+
+        .phone-link:hover {
+            color: #a76551;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        /* Clean Matrix Schedule Layout */
+        .schedule-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            border-bottom: 1px dashed #dfd6c4;
+            padding-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .schedule-row:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .day { 
+            font-weight: 500; 
+            color: #9b6d5c;
+        }
+        
+        .time { 
+            color: #a5725c; 
+        }
+        
+        .closed { 
+            color: #a15848; /* Sophisticated terracotta rust warning accent */
+            font-weight: 600; 
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <h1>Our Location</h1>
+
+        <div class="content-grid">
+            <!-- Google Map Visualization Area -->
+                <section class="map-container">
+                <div class="map-box">
+                    <p>Google Map Visualization Area</p>
+                </div>
+                <a href="https://www.google.com/maps/search/Main+Aptech+Branch+Shahra-e-Faisal/@24.8632137,67.0715984,17z?entry=ttu&g_ep=EgoyMDI2MDcwOC4wIKXMDSoASAFQAw%3D%3D" 
+                   target="_blank" 
+                   class="btn-direction">
+                    Click & Get Directions on Google Maps
+                </a>
+            </section>
+
+            <!-- Right Column: Structured Information -->
+            <aside class="info-sidebar">
+                
+                <!-- Address -->
+                <div class="info-section">
+                    <h2>Address</h2>
+                    <p>Main Aptech Shahrah-e-Faisal,<br>
+                        Karachi, Pakistan
+                    </p>
+                </div>
+
+                <!-- Opening Hours -->
+                <div class="info-section">
+                    <h2>Opening Hours</h2>
+                    <div class="schedule">
+                        <div class="schedule-row">
+                            <span class="day">Mon – Fri</span>
+                            <span class="time">9:00 AM – 8:00 PM</span>
+                        </div>
+                        <div class="schedule-row">
+                            <span class="day">Saturday</span>
+                            <span class="time">9:30 AM – 8:00 PM</span>
+                        </div>
+                        <div class="schedule-row">
+                            <span class="day">Sunday</span>
+                            <span class="closed">Closed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Block -->
+                <div class="info-section">
+                    <h2>Telephone</h2>
+                    <p>For inquiries & appointments:</p>
+                    <p><a href="tel:+92 334 5678901" class="phone-link">+92 334 5678901</a></p>
+                </div>
+
+            </aside>
+        </div>
+    </main>
+
+</body>
+</html>
