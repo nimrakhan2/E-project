@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compare Products</title>
+<link rel="stylesheet" href="c style.css">
+</head>
+<body>
+
+<div class="container">
+<h1>Compare Products</h1>
+<p>Pick any two pieces to see them side by side.</p>
+
+<div class="dropdowns">
+
+<select id="product1" onchange="showProducts()">
+
+<option value="">Select Product A</option>
+
+<optgroup label="Gucci">
+<option>Small pouch with strap and gucci plaque</option>
+<option>Gucci Horsebit Web card case wallet</option>
+</optgroup>
+
+<optgroup label="Louis Vuitton">
+<option>Multipass purse</option>
+<option>Locked passport cover</option>
+</optgroup>
+
+<optgroup label="Prada">
+<option>Prada Bonnie small linen and leather bag</option>
+<option>Prada Satin mini wallet</option>
+</optgroup>
+
+<optgroup label="Chanel">
+<option>Chanel Boy bag</option>
+<option>Chanel Classic Zipped coin</option>
+</optgroup>
+
+<optgroup label="Fendi">
+<option>Fendi Baguette</option>
+<option>Fendi Baguette Micro Trifold</option>
+</optgroup>
+
+<optgroup label="Hermes">
+<option>Plume mini bag</option>
+<option>Constance slim wallet</option>
+</optgroup>
+
+</select>
+
+<select id="product2" onchange="showProducts()">
+
+<option value="">Select Product B</option>
+
+<optgroup label="Gucci">
+<option>Small pouch with strap and gucci plaque</option>
+<option>Horsebit Web card case wallet</option>
+</optgroup>
+
+<optgroup label="Louis Vuitton">
+<option>Multipass purse</option>
+<option>Locked passport cover</option>
+</optgroup>
+
+<optgroup label="Prada">
+<option>Bonnie small linen and leather bag</option>
+<option>Satin mini wallet</option>
+</optgroup>
+
+<optgroup label="Chanel">
+<option>Boy bag</option>
+<option>Classic Zipped coin</option>
+</optgroup>
+
+<optgroup label="Fendi">
+<option>Fendi Baguette</option>
+<option>Baguette Micro Trifold</option>
+</optgroup>
+
+<optgroup label="Hermes">
+<option>Plume mini bag</option>
+<option>Constance slim wallet</option>
+</optgroup>
+
+</select>
+</div>
+
+<table id="compareTable">
+<thead>
+<tr>
+<th>Details</th>
+<th id="name1">Product A</th>
+<th id="name2">Product B</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Image</td>
+<td><img id="img1"></td>
+<td><img id="img2"></td>
+</tr>
+
+<tr>
+<td>Brand</td>
+<td id="brand1"></td>
+<td id="brand2"></td>
+</tr>
+
+<tr>
+<td>Price</td>
+<td id="price1"></td>
+<td id="price2"></td>
+</tr>
+
+<tr>
+<td>Material</td>
+<td id="material1"></td>
+<td id="material2"></td>
+</tr>
+
+<tr>
+<td>Size</td>
+<td id="size1"></td>
+<td id="size2"></td>
+</tr>
+
+<tr>
+<td>Features</td>
+<td id="feature1"></td>
+<td id="feature2"></td>
+</tr>
+</tbody>
+</table>
+
+<div id="download">
+<button onclick="downloadDoc()">
+Download Docx
+</button>
+</div>
+</div>
+
+<script src="c script.js"></script>
+
+</body>
+</html>
